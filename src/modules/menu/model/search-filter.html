@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Filter</title>
+    <link rel="stylesheet" href="../template/menu.css" />
+  </head>
+  <body>
+    <div class="app filter-page">
+      <!-- HEADER -->
+      <div class="filter-header">
+        <span class="back">‹</span>
+        <span class="title">Filter</span>
+        <div class="icons">
+          <img src="../../../../public/icons/giohang.png" />
+          <img src="../../../../public/icons/user.png" />
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div class="filter-card">
+        <!-- Categories -->
+        <section class="categories">
+          <div class="category active">
+            <img src="../../../../public/icons/ic_doannhe.png" />
+            <span>Món ăn nhẹ</span>
+          </div>
+          <div class="category">
+            <img src="../../../../public/icons/ic_meal.png" />
+            <span>Món Chính</span>
+          </div>
+          <div class="category">
+            <img src="../../../../public/icons/ic_vegan.png" />
+            <span>Ăn Chay</span>
+          </div>
+          <div class="category">
+            <img src="../../../../public/icons/ic_kem.png" />
+            <span>Tráng Miệng</span>
+          </div>
+          <div class="category">
+            <img src="../../../../public/icons/ic_drink.png" />
+            <span>Nước Uống</span>
+          </div>
+        </section>
+
+        <!-- Sort -->
+        <h4>Sort by</h4>
+        <span>Top Rated</span>
+        <div class="review-stars">
+          <img src="../../../../public/icons/star-outline.png" />
+          <img src="../../../../public/icons/star-outline.png" />
+          <img src="../../../../public/icons/star-outline.png" />
+          <img src="../../../../public/icons/star-outline.png" />
+          <img src="../../../../public/icons/star-outline.png" />
+        </div>
+
+        <!-- Tags -->
+        <div class="filter-tags">
+          <span class="tag">Bruschetta</span>
+          <span class="tag">Spring Rolls</span>
+          <span class="tag">Crepes</span>
+          <span class="tag">Wings</span>
+          <span class="tag active">Skewers</span>
+          <span class="tag active">Salmon</span>
+          <span class="tag">Mexican</span>
+          <span class="tag">Baked</span>
+          <span class="tag">Appetizer</span>
+        </div>
+
+        <!-- Price -->
+        <h4>Price</h4>
+        <input type="range" min="1" max="100" value="10" class="price-range" />
+        <div class="price-labels">
+          <span>$1</span>
+          <span>$10</span>
+          <span>$50</span>
+          <span>$100+</span>
+        </div>
+
+        <!-- Button -->
+        <button class="apply-btn">Apply</button>
+      </div>
+    </div>
+    <script>
+      const stars = document.querySelectorAll(".review-stars img");
+
+      stars.forEach((star, index) => {
+        star.addEventListener("click", () => {
+          stars.forEach((s, i) => {
+            s.src =
+              i <= index
+                ? "../../../../public/icons/star-fill.png"
+                : "../../../../public/icons/star-outline.png";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

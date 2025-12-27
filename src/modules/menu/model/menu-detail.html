@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chi tiết món ăn</title>
+
+  <link rel="stylesheet" href="../template/menu-detail.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Header -->
+  <header class="header">
+    <button class="back-btn">‹</button>
+    <h1>Chi tiết món ăn</h1>
+  </header>
+
+  <!-- Content -->
+  <main class="content">
+    <div class="card">
+
+      <!-- Image -->
+      <img 
+        src="../../../../public/images/goitom.png" 
+        alt="Food Image"
+        class="food-image"
+      />
+
+      <!-- Price & quantity -->
+      <div class="price-row">
+        <span class="price">$50.00</span>
+
+        <div class="quantity">
+          <button id="minus">−</button>
+          <span id="qty">1</span>
+          <button id="plus">+</button>
+        </div>
+      </div>
+
+      <!-- Name -->
+      <h2 class="food-name">Gỏi tôm</h2>
+
+      <!-- Description -->
+      <p class="description">
+        Shrimp marinated in zesty lime juice, mixed with crisp onions,
+        tomatoes, and cilantro
+      </p>
+
+    </div>
+  </main>
+
+ <footer class="footer">
+  <button class="add-cart" onclick="addToCart()">
+    Thêm vào giỏ hàng
+  </button>
+</footer>
+<script src="../view/cart.js"></script>
+<script src="../view/menu-detail.js"></script>
+</body>
+</html>

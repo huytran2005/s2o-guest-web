@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Menu</title>
+    <link rel="stylesheet" href="../template/menu.css" />
+    <link rel="stylesheet" href="../template/cart.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Header -->
+      <header class="header">
+        <div class="search-box">
+          <img src="../../../../public/icons/search.png" alt="" />
+          <input type="text" placeholder="Search" />
+        </div>
+        <div class="cart" onclick="openCart()">
+          <img src="../../../../public/icons/giohang.png" />
+        </div>
+      </header>
+
+      <!-- Greeting -->
+      <section class="greeting">
+        <h2>Good Morning</h2>
+        <p>Table 5</p>
+      </section>
+
+      <!-- Categories -->
+      <section class="categories">
+        <div class="category active">
+          <img src="../../../../public/icons/ic_doannhe.png" />
+          <span>Món ăn nhẹ</span>
+        </div>
+        <div class="category">
+          <img src="../../../../public/icons/ic_meal.png" />
+          <span>Món Chính</span>
+        </div>
+        <div class="category">
+          <img src="../../../../public/icons/ic_vegan.png" />
+          <span>Ăn Chay</span>
+        </div>
+        <div class="category">
+          <img src="../../../../public/icons/ic_kem.png" />
+          <span>Tráng Miệng</span>
+        </div>
+        <div class="category">
+          <img src="../../../../public/icons/ic_drink.png" />
+          <span>Nước Uống</span>
+        </div>
+      </section>
+
+          <!-- SORT -->
+          <div class="sort">Sort by <b>Popular</b></div>
+
+          <!-- FOOD 1 -->
+          <div class="food-card">
+            <img src="../../../../public/images/Snacks_1.png" />
+            <div class="food-content">
+              <h3>
+                Mexican Appetizer
+                <span class="rate">5.0⭐</span>
+                <span class="price">$15.00</span>
+              </h3>
+              <p>Tortilla Chips With Toppings</p>
+            </div>
+          </div>
+
+          <!-- FOOD 2 -->
+          <div class="food-card">
+            <img src="../../../../public/images/Snacks_2.png" />
+            <div class="food-content">
+              <h3>
+                Pork Skewer
+                <span class="rate">4.0⭐</span>
+                <span class="price">$12.99</span>
+              </h3>
+              <p>
+                Grilled pork with herbs and spices, then grilled to perfection,
+                served with a side of zesty dipping sauce.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CART OVERLAY -->
+<div id="cartOverlay" class="cart-overlay">
+  <div class="cart-panel">
+
+    <!-- Header -->
+    <div class="cart-header">
+      <img src="../../../../public/icons/white-cart.png" />
+      <h2>Cart</h2>
+    </div>
+
+    <!-- ===== EMPTY CART ===== -->
+    <div id="cartEmpty">
+      <p class="cart-empty-text">Your cart is empty</p>
+
+      <div class="cart-add">
+        <div class="add-circle">+</div>
+        <p>Want To Add<br/>Something?</p>
+      </div>
+    </div>
+
+    <!-- ===== CART WITH ITEMS ===== -->
+    <div id="cartContent">
+
+      <p class="cart-info">You have <span id="cartCount"></span> items in the cart</p>
+
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="cart-summary">
+        <div class="row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+        <div class="row"><span>Tax and Fees</span><span>$5.00</span></div>
+        <div class="row"><span>Delivery</span><span>$3.00</span></div>
+        <div class="row total"><span>Total</span><span id="total">$0.00</span></div>
+      </div>
+
+      <button class="checkout-btn">Checkout</button>
+    </div>
+
+  </div>
+</div>
+
+
+    <script src="../view/menu.js"></script>
+    <script src="../view/cart.js"></script>
+  </body>
+</html>

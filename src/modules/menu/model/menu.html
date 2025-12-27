@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Food App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../template/menu.css" />
+    <link rel="stylesheet" href="../template/cart.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Header -->
+      <header class="header">
+        <div class="search-box">
+          <img src="../../../../public/icons/search.png" alt="" />
+          <input type="text" placeholder="Search" />
+        </div>
+        <div class="cart-icon" onclick="openCart()">
+          <img src="../../../../public/icons/giohang.png" />
+        </div>
+      </header>
+
+      <!-- Greeting -->
+      <section class="greeting">
+        <h2>Good Morning</h2>
+        <p>Table 5</p>
+      </section>
+
+      <!-- Categories -->
+      <section class="categories">
+        <div class="category active">
+          <img src="../../../../public/icons/ic_doannhe.png" />
+          <span>Món ăn nhẹ</span>
+        </div>
+        <div class="category">
+          <img src="../../../../public/icons/ic_meal.png" />
+          <span>Món Chính</span>
+        </div>
+        <div class="category">
+          <img src="../../../../public/icons/ic_vegan.png" />
+          <span>Ăn Chay</span>
+        </div>
+        <div class="category">
+          <img src="../../../../public/icons/ic_kem.png" />
+          <span>Tráng Miệng</span>
+        </div>
+        <div class="category">
+          <img src="../../../../public/icons/ic_drink.png" />
+          <span>Nước Uống</span>
+        </div>
+      </section>
+
+      <!-- BEST SELLER -->
+      <section class="section">
+        <h3>Bán chạy nhất</h3>
+
+        <div class="food-list">
+          <div
+            class="food-card"
+            data-id="1"
+            data-name="Sushi"
+            data-price="30"
+            data-image="../../../../public/images/shusi.png"
+          >
+            <img src="../../../../public/images/shusi.png" />
+            <div class="food-overlay"></div>
+            <span class="price">$30.0</span>
+          </div>
+
+          <div
+            class="food-card"
+            data-id="2"
+            data-name="Salad"
+            data-price="50"
+            data-image="../../../../public/images/salad.png"
+          >
+            <img src="../../../../public/images/salad.png" />
+            <div class="food-overlay"></div>
+            <span class="price">$50.0</span>
+          </div>
+
+          <div
+            class="food-card"
+            data-id="3"
+            data-name="Cake"
+            data-price="12"
+            data-image="../../../../public/images/cake.png"
+          >
+            <img src="../../../../public/images/cake.png" />
+            <div class="food-overlay"></div>
+            <span class="price">$12.0</span>
+          </div>
+
+          <div
+            class="food-card"
+            data-id="4"
+            data-name="Ice Cream"
+            data-price="8.2"
+            data-image="../../../../public/images/kem.png"
+          >
+            <img src="../../../../public/images/kem.png" />
+            <div class="food-overlay"></div>
+            <span class="price">$8.20</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROMO -->
+      <section class="promo">
+        <img src="../../../../public/images/promo.png" class="promo-img" />
+
+        <div class="promo-text">
+          <p>Experience our delicious new dish</p>
+          <h2>30% OFF</h2>
+        </div>
+      </section>
+
+      <!-- Gợi ý -->
+      <section class="section">
+        <h3>Gợi ý</h3>
+
+        <div class="food-list">
+          <div
+            class="food-card large"
+            data-id="10"
+            data-name="Burger"
+            data-price="6"
+            data-image="../../../../public/images/buger.png"
+          >
+            <img src="../../../../public/images/buger.png" />
+            <div class="food-overlay"></div>
+            <span class="price">$6.0</span>
+          </div>
+
+          <div
+            class="food-card large"
+            data-id="11"
+            data-name="Gỏi cuốn"
+            data-price="25"
+            data-image="../../../../public/images/goicuon.png"
+          >
+            <img src="../../../../public/images/goicuon.png" />
+            <div class="food-overlay"></div>
+            <span class="price">$25.0</span>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="section">
+      <h3>Món ăn nhẹ</h3>
+
+      <div class="food-list">
+        <div
+          class="food-card"
+          data-id="20"
+          data-name="Sushi"
+          data-price="30"
+          data-image="../../../../public/images/shusi.png"
+        >
+          <img src="../../../../public/images/shusi.png" />
+          <div class="food-overlay"></div>
+          <span class="price">$30.0</span>
+        </div>
+
+        <div
+          class="food-card"
+          data-id="21"
+          data-name="Salad"
+          data-price="50"
+          data-image="../../../../public/images/salad.png"
+        >
+          <img src="../../../../public/images/salad.png" />
+          <div class="food-overlay"></div>
+          <span class="price">$50.0</span>
+        </div>
+
+        <div
+          class="food-card"
+          data-id="22"
+          data-name="Cake"
+          data-price="50"
+          data-image="../../../../public/images/cake.png"
+        >
+          <img src="../../../../public/images/cake.png" />
+          <div class="food-overlay"></div>
+          <span class="price">$50.0</span>
+        </div>
+
+        <div
+          class="food-card"
+          data-id="23"
+          data-name="Ice Cream"
+          data-price="50"
+          data-image="../../../../public/images/kem.png"
+        >
+          <img src="../../../../public/images/kem.png" />
+          <div class="food-overlay"></div>
+          <span class="price">$50.0</span>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h3>Món ăn Chính</h3>
+
+      <div class="food-list">
+        <div
+          class="food-card"
+          data-id="30"
+          data-name="Sushi Special"
+          data-price="30"
+          data-image="../../../../public/images/shusi.png"
+        >
+          <img src="../../../../public/images/shusi.png" />
+          <div class="food-overlay"></div>
+          <span class="price">$30.0</span>
+        </div>
+
+        <div
+          class="food-card"
+          data-id="31"
+          data-name="Salad Premium"
+          data-price="50"
+          data-image="../../../../public/images/salad.png"
+        >
+          <img src="../../../../public/images/salad.png" />
+          <div class="food-overlay"></div>
+          <span class="price">$50.0</span>
+        </div>
+
+        <div
+          class="food-card"
+          data-id="32"
+          data-name="Cake Special"
+          data-price="50"
+          data-image="../../../../public/images/cake.png"
+        >
+          <img src="../../../../public/images/cake.png" />
+          <div class="food-overlay"></div>
+          <span class="price">$50.0</span>
+        </div>
+
+        <div
+          class="food-card"
+          data-id="33"
+          data-name="Ice Cream Special"
+          data-price="50"
+          data-image="../../../../public/images/kem.png"
+        >
+          <img src="../../../../public/images/kem.png" />
+          <div class="food-overlay"></div>
+          <span class="price">$50.0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CART OVERLAY -->
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+    <!-- CART PANEL -->
+    <div id="cart" class="cart">
+      <div class="cart-header">
+        <img src="../../../../public/icons/white-cart.png" />
+        <span>Cart</span>
+      </div>
+
+      <div class="cart-divider"></div>
+
+      <!-- EMPTY -->
+      <div id="cartEmpty" class="cart-empty">
+        <p>Your cart is empty</p>
+        <div class="add-circle">+</div>
+        <p>Want To Add<br />Something?</p>
+      </div>
+
+      <!-- CONTENT -->
+      <div id="cartContent" class="cart-content">
+        <p class="cart-title">Your items</p>
+        <div id="cartItems"></div>
+
+        <div class="cart-summary">
+          <div><span>Subtotal</span><span id="subTotal">$0.00</span></div>
+          <div><span>Tax and Fees</span><span>$5.00</span></div>
+          <div><span>Delivery</span><span>$3.00</span></div>
+          <hr />
+          <div class="total">
+            <span>Total</span>
+            <span id="total">$0.00</span>
+          </div>
+        </div>
+
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+    <script src="../view/cart.js"></script>
+    <script src="../view/menu.js"></script>
+  </body>
+</html>

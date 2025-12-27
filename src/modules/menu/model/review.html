@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đánh giá</title>
+    <link rel="stylesheet" href="../template/menu.css" />
+  </head>
+  <body>
+    <div class="app review-page">
+      <!-- HEADER -->
+      <div class="review-header">
+        <span class="back">‹</span>
+        <span class="title">Đánh giá</span>
+      </div>
+
+      <!-- CARD -->
+      <div class="review-card">
+        <img
+          src="../../../../public/images/chicken-cury.png"
+          class="review-img"
+        />
+
+        <h3 class="review-title">Chicken Curry</h3>
+
+        <p class="review-desc">
+          We'd love to know what you think of your dish.
+        </p>
+
+        <!-- STARS -->
+        <div class="review-stars">
+          <img src="../../../../public/icons/star-outline.png" />
+          <img src="../../../../public/icons/star-outline.png" />
+          <img src="../../../../public/icons/star-outline.png" />
+          <img src="../../../../public/icons/star-outline.png" />
+          <img src="../../../../public/icons/star-outline.png" />
+        </div>
+
+        <p class="review-note">Leave us your comment!</p>
+
+        <textarea
+          class="review-textarea"
+          placeholder="Write Review..."
+        ></textarea>
+
+        <!-- BUTTONS -->
+        <div class="review-actions">
+          <button class="btn-cancel">Cancel</button>
+          <button class="btn-submit">Submit</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const stars = document.querySelectorAll(".review-stars img");
+
+      stars.forEach((star, index) => {
+        star.addEventListener("click", () => {
+          stars.forEach((s, i) => {
+            s.src =
+              i <= index
+                ? "../../../../public/icons/star-fill.png"
+                : "../../../../public/icons/star-outline.png";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
